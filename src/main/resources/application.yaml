@@ -1,0 +1,25 @@
+app:
+  event-create-list:
+    enabled: true
+
+students-settings:
+  names:
+    - Andrew
+    - Bob
+    - Caleb
+    - Bradley
+    - Daniel
+    - Jessie
+    - Vincent
+    - Richard
+    - Jason
+  surnames:
+    - Smith
+    - Lopez
+    - Jones
+    - Castro
+    - Harper
+    - Dennis
+    - Lewis
+    - Hicks
+    - Wilson

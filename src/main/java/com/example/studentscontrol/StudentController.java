@@ -2,7 +2,6 @@ package com.example.studentscontrol;
 
 import com.example.studentscontrol.sudentevent.StudentCreateEventHolder;
 import com.example.studentscontrol.sudentevent.StudentRemoveEventHolder;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
@@ -52,7 +51,7 @@ public class StudentController {
     public void addStudentToList(@ShellOption(value = "FN") String firstName,
                                  @ShellOption(value = "LN") String lastName,
                                  @ShellOption(value = "AG") int age) {
-        int studentId = random.nextInt(11111,99999);
+        int studentId = GeneratedSettingsStudent.generateID();
         Student student = Student.builder().id(studentId).firstName(firstName).lastName(lastName).age(age).build();
         studentMap.put(studentId,student);
         publisher.publishEvent(new StudentCreateEventHolder(this,student));
